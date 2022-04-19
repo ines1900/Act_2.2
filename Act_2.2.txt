@@ -1,0 +1,9 @@
+SELECT * FROM client;
+SELECT * FROM produit;
+SELECT DISTINCT type FROM produit;
+SELECT type ,COUNT(*) FROM produit GROUP BY type;
+SELECT * FROM client WHERE `client_nom` LIKE '%s%';
+SELECT * FROM fournisseurs INNER JOIN produit WHERE fournisseurs.fournisseur_id = produit.référence_fournisseur;
+SELECT fournisseur_nom,Référence_fournisseur ,COUNT(*) FROM produit, fournisseurs
+WHERE produit.référence_fournisseur = fournisseur_id
+GROUP BY référence_fournisseur;
